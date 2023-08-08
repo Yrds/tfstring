@@ -37,3 +37,15 @@ std::cout << tf::string{"hello my friends"}.endswith("my"); // false
 tf::string{"hi"}.contains("h"); // true
 tf::string{"hi"}.contains("b"); // false
 ```
+
+### Meson
+
+Clone or wrap the repository into `subprojects` directory and use the dependency into your `meson.build`, like example below:
+
+```
+#...#
+
+tfstring_dep = subproject('tfstring').get_variable('tfstring_dep')
+
+#...#
+```
